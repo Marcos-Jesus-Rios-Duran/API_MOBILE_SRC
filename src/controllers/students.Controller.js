@@ -1,10 +1,22 @@
+import studentDAO from "../dao/students.dao.js";
 const studentsController = [];
 
 studentsController.getAll = (req, res) => {
   // Aquí voy a pedir al DAO los datos de los estudiantes 
-  res.json({
-    data: "Aquí voy a enviar los datos de los estudiantes, aguanta las carnitas"
+  studentDAO.getAll().then((students)=>{
+    res.json({
+        data: students
+      });
+  })
+  .catch((error)=>{
+    res.json({
+        data:{
+            message:error
+            
+        }
+    })
   });
+
 };
 
 export default studentsController;
