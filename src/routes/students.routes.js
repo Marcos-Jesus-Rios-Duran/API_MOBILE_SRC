@@ -1,8 +1,6 @@
 import { Router } from "express";
-const studentsRoutes=Router();
-studentsRoutes.get('/getOne',(req,res)=>{
-    res.json({
-        data:"Student"
-    })
-})
+import studentsController from "../controllers/students.Controller.js"
+const studentsRoutes = Router();
+studentsRoutes.get('/getAll', studentsController.getAll);
+
 export default studentsRoutes;

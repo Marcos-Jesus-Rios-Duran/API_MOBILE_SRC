@@ -16,7 +16,7 @@ const db = mongoose.connection;
 db.on('error', (error) => {
   console.error('Error en la conexión a MongoDB:', error);
 });
-
+  
 db.once('open', () => {
   console.log('Conexión a MongoDB establecida con éxito');
 });
