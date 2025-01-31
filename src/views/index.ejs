@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Escolar</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Control Escolar</h1>
+            <a href="a" data-icon="gear" class="ui-btn-right">Opciones</a>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="a">Alumnos</a></li>
+                    <li><a href="a">Docentes</a></li>
+                    <li><a href="a">Aulas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="content" class="ui-content">
+            <form action="/api/students/insert" method="POST">
+                <label for="txtStudentId">Matricula:</label>
+                <input type="number" name="student_id" id="txtStudentId">
+
+                <label for="txtname">Nombre</label>
+                <input type="text" name="name" id="txtname">
+
+                <label for="txtlastname">Apellido</label>
+                <input type="text" name="lastname" id="txtlastname">
+
+                <label for="txtgrade">Grado</label>
+                <input type="number" name="grade" id="txtgrade">
+
+                <label for="txtgroup">Grupo</label>
+                <input type="text" name="Grupo" id="txtgroup">
+
+                <label for="txtaverage">Promedio</label>
+                <input type="number" name="average" id="txtaverage">
+
+                <button class="ui-btn ui-btn-inline">Guardar</button>
+            </form>
+
+
+        
+        </div>
+        <div data-role="footer" style="overflow:hidden;">
+            <h4 style="text-align: center;">Redes Sociales</h4>
+            <div data-role="navbar">
+                <ul>  
+                    <li><a href="#" data-icon="user"></a></li>
+                    <li><a href="#" data-icon="heart"></a></li>
+                    <li><a href="#" data-icon="mail"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
